@@ -1,8 +1,8 @@
 # Pull base image.
-FROM itwars/rpi-java8
+FROM itwars/rpi-java
 MAINTAINER Vincent RABAH <vincent.rabah@gmail.com>
 
-ENV ES_PKG_NAME elasticsearch-1.5.1
+ENV ES_PKG_NAME elasticsearch-1.6.0
 
 # Install Elasticsearch.
 RUN \
@@ -30,5 +30,4 @@ CMD ["/elasticsearch/bin/elasticsearch"]
 # Expose ports.
 #   - 9200: HTTP
 #   - 9300: transport
-EXPOSE 9200
-EXPOSE 9300
+EXPOSE 9200 9300
